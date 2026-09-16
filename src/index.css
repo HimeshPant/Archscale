@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "IBM Plex Sans", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-paper: #F5F6F4;
+  --color-panel: #FFFFFF;
+  --color-ink: #1B2430;
+  --color-ink-soft: #5B6472;
+  --color-line: #DCE0E2;
+  --color-blueprint: #2455A4;
+  --color-blueprint-soft: #E8EEF8;
+  --color-site: #C4602A;
+  --color-site-soft: #F7E9DF;
+  --color-moss: #4C7A5E;
+  --color-moss-soft: #E7F0EA;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-blueprint-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
